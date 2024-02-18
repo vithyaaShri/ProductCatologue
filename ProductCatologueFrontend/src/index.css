@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 85vh;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  
+  align-items: center;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.App {
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
+  background:linear-gradient(to top,blue,pink,grey,blue);
+}
+
+.Header, .Footer {
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.Footer{
+  color:white
+}
+
+.Header h1 {
+  font-size: 1.5rem;
+  align-items: center;
+  padding-left: 280px;
+  color: azure;
+  
+}
+
+.Header svg {
+  font-size: 2rem;
+}
+
+.Footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: center;
+}
+
+#Nav {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  height:20vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Nav .button {
+  padding: 1rem;
+}
+
+.Nav .button:hover, 
+.Nav .button:focus {
+  padding: 1rem;
+}
+
+.Nav .button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav .button:hover, 
+.Nav .button:focus, 
+.Nav .button:hover a, 
+.Nav .button:focus a  {
+  background-color: black;
+  color: blue;
+}
+body .button:hover, 
+body .button:focus, 
+body .button:hover a, 
+body .button:focus a{
+  background-color: black;
+  color: blue;
+}
+
+.Nav .button:hover a, 
+.Nav .button:focus a {
+  cursor: pointer;
+}
+.button {
+  margin-top: 200;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #333;
+  cursor: pointer;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.buttonComp{
+  text-decoration: none;
+  color: white;
+}
+
+.NewProduct, .PostPage, .About, .Missing {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.post {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+.post a {
+  text-decoration: none;
+}
+
+ .post a, 
+ .post a:visited {
+  color: #000;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.productPrice {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.postBody {
+  margin: 1rem 0;
+}
+
+.searchForm  {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height:500px;
+  background-image: url(C:\Users\vithy\react-Assign\productcatalog\images\OIP.jpg);
+  background-size: 620px;
+  padding: 75px;
+  align-items: center;
+}
+.searchForm h2{
+  padding: 20px;
+  margin-left: 30px;
+  color: blue;
+}
+
+.searchForm label {
+  margin-top: 1rem;
+  color: beige;
+  text-decoration: Bold;
+  box-shadow: gray;
+}
+
+.searchForm  input[type='text'], 
+.searchForm   textarea {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+  
+}
+
+.searchForm   textarea {
+  height: 100px;
+}
+
+.searchForm  button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 50px;
+  background-color: black;
+  color: antiquewhite;
+}
+.table{
+  height:100vh ;
+  width:100vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-image: url(C:\Users\vithy\react-Assign\productcatalog\images\image.png);
+  background-size: 650px;
+}
+.tr,.tr1{
+ 
+}
+.table,.tr,.td,th{
+  border: #000 solid;
+  border-collapse: collapse;
+  
+}
+.table .td{
+  border: none;
+}
+.td{
+  width: 10px;
+  align-items: center;
+  margin-left: 10px;
+  padding: 2px;
+}
+
+.Missing p, .PostPage p, .NewProduct p {
+  margin-top: 1rem;
+}
+
+
+.editButton {
+  background-color: #333;
+}
+
+.statusMsg {
+  margin-top: 2rem;
+}
+.table{
+  height:50vh
+}
+
+/* @media only screen and (min-width: 610px) {
+  html {
+    font-size: 22px;
+  }
+
+  .Header h1 {
+    font-size: 2rem;
+  }
+
+  .Nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Nav ul {
+    text-align: right;
+  }
+
+  .Nav li:hover, 
+  .Nav li:focus, 
+  .Nav li:hover a, 
+  .Nav li:focus a  {
+    background-color: #eee;
+    color: #333;
+  }
+
+  .searchForm {
+    width: 50%;
+    padding: .5rem 0;
+  }
+ 
+  .searchForm input[type="text"] {
+    margin-left: 0.5rem;
+  }
+
+  .newProductForm textarea {
+    height: 300px;
+  }
+} */
+
+/* @media only screen and (min-width: 992px) {
+
+  .Header svg {
+    font-size: 3rem;
+  } */
+/* 
+} */
