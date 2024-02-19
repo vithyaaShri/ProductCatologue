@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name="products")
 @Entity
-
+//This is an entity class used to map to producs table in database
 public class Product {
     @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
