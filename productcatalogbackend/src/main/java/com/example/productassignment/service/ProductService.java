@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+//It is an Interface and Used class Product srvice to implements its Method
 public interface ProductService {
    ProductDto saveProduct(ProductDto productDto);
    //Product saveProduct(Product product);
