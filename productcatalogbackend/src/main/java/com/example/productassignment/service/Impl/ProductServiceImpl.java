@@ -12,23 +12,21 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 
-
+//This class implements methods from Interface ProductService
 public class ProductServiceImpl implements ProductService {
-
+    //Object of Repository class
     private ProductRepository productRepository;
     private ModelMapper modelMapper;
 
+    //This is the method for Insert and implmented using dao and modelMapper
     @Override
     public ProductDto saveProduct(ProductDto productDto) {
         Product product=modelMapper.map(productDto, Product.class);
         Product savedproduct=productRepository.save(product);
     return modelMapper.map(savedproduct,ProductDto.class);
     }
-//public Product saveProduct(Product product) {
-//    return productRepository.save(product);
-//}
 
-
+    //It is the get all method to display all in table
     @Override
     public List<Product> getProduct() {
         return productRepository.findAll();
