@@ -13,15 +13,12 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
-
+    //This is get mapping to get all products from database
     @GetMapping("/product")
     public List<Product> getAllEmployees() {
         return productService.getProduct();
     }
-//    @PostMapping("/product/post")
-//    public Product saveProduct(@RequestBody Product product) {
-//        return productService.saveProduct(product);
-//    }
+    //Post is to post to database
     @PostMapping("/product/post")
     public ProductDto saveProduct(@RequestBody ProductDto productdto) {
         return productService.saveProduct(productdto);
